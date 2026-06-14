@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://c5ckd13kbx3y7"]
+
+[ext_resource type="Script" uid="uid://dpv81nx5jv456" path="res://game_screen.gd" id="1_t5odh"]
+
+[node name="GameScreen" type="Control" unique_id=1935827483]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5odh")
+
+[node name="BackGround" type="ColorRect" parent="." unique_id=477044186]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=505549996]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -206.0
+offset_right = 154.0
+offset_bottom = 83.0
+grow_horizontal = 2
+
+[node name="ClockLabel" type="Label" parent="TopBar" unique_id=960522422]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
+[node name="ProgressBar" type="ProgressBar" parent="TopBar" unique_id=1592687516]
+layout_mode = 2
+
+[node name="CCTVPanel" type="Panel" parent="." unique_id=2059199698]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -189.0
+offset_right = 250.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArtifactImage" type="TextureRect" parent="CCTVPanel" unique_id=353966054]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 68.0
+offset_right = 182.0
+offset_bottom = 108.0
+
+[node name="DescriptionLabel" type="Label" parent="CCTVPanel" unique_id=665958583]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PrevButton" type="Button" parent="CCTVPanel" unique_id=237883029]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 243.0
+offset_right = 25.0
+offset_bottom = 274.0
+text = "<"
+
+[node name="NextButton" type="Button" parent="CCTVPanel" unique_id=344215641]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 244.0
+offset_right = 405.0
+offset_bottom = 275.0
+text = ">"
+
+[node name="RoomButtons" type="VBoxContainer" parent="." unique_id=582373890]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -55.0
+offset_right = 164.0
+offset_bottom = 56.0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="Room1Button" type="Button" parent="RoomButtons" unique_id=590670535]
+layout_mode = 2
+
+[node name="Room2Button" type="Button" parent="RoomButtons" unique_id=1613151346]
+layout_mode = 2
+
+[node name="Room3Button" type="Button" parent="RoomButtons" unique_id=1452967045]
+layout_mode = 2
+
+[node name="ReportButton" type="Button" parent="." unique_id=1577562595]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -161.0
+offset_top = -116.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ManualButton" type="Button" parent="." unique_id=212590391]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -282.0
+offset_bottom = -126.0
+grow_horizontal = 0
+grow_vertical = 0

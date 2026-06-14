@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://jy4m0y1egw7y"]
+
+[ext_resource type="Script" uid="uid://dkt87fsuks418" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://co2c6ptefryaa" path="res://aee/배경화면.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://c7pl7trukeacy" path="res://aee/pointlight.png" id="3_glbon"]
+[ext_resource type="AudioStream" uid="uid://cggdgfw3vt6gu" path="res://audio/main.mp3" id="4_jix8l"]
+
+[sub_resource type="FontVariation" id="FontVariation_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.29944944, 0.29946738, 0.5079603, 0.6156863)
+
+[node name="MainMenu" type="Control" unique_id=92166697]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fu7sn")
+
+[node name="BackGround" type="TextureRect" parent="." unique_id=1416732636]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 1283.0
+offset_bottom = 720.0
+texture = ExtResource("2_jix8l")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1305887936]
+color = Color(0.1519965, 0.15199631, 0.15199634, 1)
+
+[node name="Flashlight" type="PointLight2D" parent="." unique_id=290615049]
+position = Vector2(665, 352)
+texture = ExtResource("3_glbon")
+texture_scale = 0.45
+
+[node name="ButtonGroup" type="VBoxContainer" parent="." unique_id=1955469787]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 397.0
+offset_right = 433.0
+offset_bottom = 527.0
+theme_override_constants/separation = 20
+metadata/_edit_group_ = true
+
+[node name="StartButton" type="Button" parent="ButtonGroup" unique_id=142725317]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_7vrkn")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu7sn")
+text = "        Start        "
+
+[node name="ExitButton" type="Button" parent="ButtonGroup" unique_id=1835865283]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_7vrkn")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu7sn")
+text = "        Exit        "
+
+[node name="SFX_Main" type="AudioStreamPlayer" parent="." unique_id=360274487]
+stream = ExtResource("4_jix8l")
+volume_db = -0.775
+autoplay = true
+parameters/looping = false
